@@ -1,81 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test page</title>
-    <link rel="icon" href="/img/logo.png" type="image/png">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="icon" href="./img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <header class="header">
-        <a href="#"><img src="/img/logo.png" alt="logo"></a>
-        <div class="burger-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="2" y1="11" x2="38" y2="11" stroke="black" stroke-width="2"></line>
-                <line x1="2" y1="19" x2="38" y2="19" stroke="black" stroke-width="2"></line>
-                <line x1="2" y1="27" x2="38" y2="27" stroke="black" stroke-width="2"></line>
-            </svg>
-        </div>
-        <nav class="nav-block">
-            <ul></ul>
-        </nav>
-        <div class="burger-block">
-            <span class="burger-block_close">&times;</span>
-            <ul></ul>
-        </div>
+      <a href="#"><img src="./img/logo.png" alt="logo" /></a>
+      <div class="burger-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
+          <line
+            x1="2"
+            y1="11"
+            x2="38"
+            y2="11"
+            stroke="black"
+            stroke-width="2"
+          ></line>
+          <line
+            x1="2"
+            y1="19"
+            x2="38"
+            y2="19"
+            stroke="black"
+            stroke-width="2"
+          ></line>
+          <line
+            x1="2"
+            y1="27"
+            x2="38"
+            y2="27"
+            stroke="black"
+            stroke-width="2"
+          ></line>
+        </svg>
+      </div>
+      <nav class="nav-block">
+        <ul></ul>
+      </nav>
+      <div class="burger-block">
+        <span class="burger-block_close">&times;</span>
+        <ul></ul>
+      </div>
     </header>
     <main>
-        <div class="desktop-block">
-            <div class="cards-block"></div>
-            <div class="buttons-block"></div>
+      <div class="desktop-block">
+        <div class="cards-block"></div>
+        <div class="buttons-block"></div>
+      </div>
+      <div class="mobile-block">
+        <div class="cards-block-mob"></div>
+        <div class="buttons-block-mob"></div>
+      </div>
+      <div class="card-popup">
+        <div class="card-popup-content">
+          <div class="card-popup_header">
+            <p class="card-popup_title"></p>
+            <span class="card-popup_close">&times;</span>
+          </div>
+          <div class="card-popup_body"></div>
         </div>
-        <div class="mobile-block">
-            <div class="cards-block-mob"></div>
-            <div class="buttons-block-mob"></div>
-        </div>
-        <div class="card-popup">
-            <div class="card-popup-content">
-                <div class="card-popup_header">
-                    <p class="card-popup_title"></p>
-                    <span class="card-popup_close">&times;</span>
+      </div>
+      <div class="add-card-popup">
+        <div class="add-card-popup-content">
+          <div class="add-card-popup_header">
+            <p class="add-card-popup_title">Add new card</p>
+            <span class="add-card-popup_close">&times;</span>
+          </div>
+          <div class="add-card-popup_body">
+            <form>
+              <div class="tow-col">
+                <div class="label-row">
+                  <label for="titleCard">Назовите статью</label>
+                  <input
+                    type="text"
+                    name="titleCard"
+                    id="titleCard"
+                    placeholder="Написание статьи"
+                    required
+                  />
                 </div>
-                <div class="card-popup_body"></div>
-            </div>
-        </div>
-        <div class="add-card-popup">
-            <div class="add-card-popup-content">
-                <div class="add-card-popup_header">
-                    <p class="add-card-popup_title">Add new card</p>
-                    <span class="add-card-popup_close">&times;</span>
+                <div class="label-row">
+                  <label for="textCard">Добавьте описание</label>
+                  <input
+                    type="text"
+                    name="textCard"
+                    id="textCard"
+                    placeholder='Lorem Ipsum - це текст-"риба", що...'
+                    required
+                  />
                 </div>
-                 <div class="add-card-popup_body">
-                    <form>
-                        <div class="tow-col">
-                            <div class="label-row">
-                                <label for="titleCard">Назовите статью</label>
-                                <input type="text" name="titleCard" id="titleCard" placeholder="Написание статьи" required>
-                            </div>
-                            <div class="label-row">
-                                <label for="textCard">Добавьте описание</label>
-                                <input type="text" name="textCard" id="textCard" placeholder='Lorem Ipsum - це текст-"риба", що...' required>
-                            </div>
-                        </div>
-                        <div class="label-row-full-width">
-                            <label for="imageUpload">Загрузите изображение:</label>
-                            <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required/>
-                        </div>
-                        <button type="submit">Add card</button>
-                    </form>
-                 </div>
-            </div>
+              </div>
+              <div class="label-row-full-width">
+                <label for="imageUpload">Загрузите изображение:</label>
+                <input
+                  type="file"
+                  id="imageUpload"
+                  name="imageUpload"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <button type="submit">Add card</button>
+            </form>
+          </div>
         </div>
+      </div>
     </main>
     <footer>
-        <a href="#"><img src="/img/logo.png" alt="logo"></a>
-        <p>© 2025 «CAT»</p>
+      <a href="#"><img src="./img/logo.png" alt="logo" /></a>
+      <p>© 2025 «CAT»</p>
     </footer>
 
-    <script type="module" src="/script/main.js"></script>
-</body>
+    <script type="module" src="./script/main.js"></script>
+  </body>
 </html>
