@@ -424,4 +424,19 @@ footer a img {
   .buttons-block-mob {
     flex-wrap: wrap;
   }
+  .card-popup_body > * {
+    max-width: 100%;
+  }
+
+  span.burger-block_close {
+    position: absolute;
+    color: #fff;
+    top: 40px;
+    right: 30px;
+    font-size: 60px;
+  }
+
+  .card-popup_body {
+    flex-direction: column;
+  }
 }
